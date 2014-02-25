@@ -1,7 +1,7 @@
 js4grownups
 ===========
 
-Material for the "Javascript for grown-ups" training session
+Slides for the "Javascript for grown-ups" training session
 
 Topics covered:
 
