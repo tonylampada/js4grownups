@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="008-prototype.js"></script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>Prototype</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * Prototype? What's this?</h3>
+    <div class="alert alert-info">
+      Let go a little slowly here. First:<br><br>
+      Every object has a [prototype], which is another object.<br>
+      When you search for an attribute on a object, the javascript <br> 
+      interpreter will see if the object itself has the property,<br>
+      if it does, then returns it, otherwise it will look in the [prototype]
+    </div>
+
+
+    <h3 style="margin-top: 30px;">
+      * Exemple 1</h3>
+    <div class="highlight"><pre>
+      var o1 = {a:1, b:2}
+      var o2 = {b:20, c:30}
+      //On chrome, you can access [prototypes] directly using  .__proto__
+      //You're not supposed to do this, this probably doesn't work on other browsers
+      o1.__proto__
+      o1.__proto__.__proto__
+      o1.__proto__ == o2.__proto__
+      
+      o1.__proto__.k = 1
+
+      //Search a variable on the prototype
+      o1.k
+      o2.k
+      o1.hasOwnProperty('k')
+
+      //But if you *set* an attribute, you write on the object itself, always:
+      o1.k = 100
+      o2.k = 200
+      o1.k
+      o2.k
+      o1.hasOwnProperty('k')
+
+      //I can use an object as the [prototype] of another
+      o1.__proto__ = o2
+      o1
+      o1.a
+      o1.b
+      o1.c
+      o1.hasOwnProperty('a')
+      o1.hasOwnProperty('b')
+      o1.hasOwnProperty('c')
+    </pre></div>
+
+    <h3 style="margin-top: 30px;">
+      * Function prototypes</h3>
+    <div class="alert alert-info">
+      Functions have a "prototype" attribute.<br><br>
+      Note that this is NOT the function's [prototype]
+    </div>
+
+    <div class="highlight"><pre>
+      function F(){}
+      F.prototype
+      F.prototype.a = 10
+      F.a
+      F.__proto__
+      F.__proto__.a = 20
+      F.a
+    </pre></div>
+
+    <div class="alert alert-info">
+      F.prototype will be the [prototype] of objects created with "new F()".<br>
+    </div>
+
+    <div class="highlight"><pre>
+      o1 = new F()
+      o1.a
+
+      //And what the furniture do I do with that???
+    </pre></div>
+
+    <div class="alert alert-info">
+      This is Javascript's half-assed way of implementing object-orientation.<br>
+      With prototypes, you don't have to build classes into your language,<br> 
+      just leave the low level heavy lifting of implementing polymorphism on the programmer<br>
+      If that ends up confusing millions of programmers, so be it!<br>
+      (What?? I never said I LIKED javascript...)
+    </div>
+      Exemplo: <button onclick="cc()">cc()</button>
+
+    <div class="alert alert-info">
+      How to do inheritance!<br>
+    </div>
+      Exemple: <button onclick="inheritance()">inheritance()</button>
+
+  <h3 style="margin-top: 30px;">Wow, I think I got it... ARE WE DONE?</h3>
+  <ul>
+    <li><a href="009-this.html">Almost. Let's talk about <strong>this</strong></a></li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script type="text/javascript">
+
+///////////////////
+
+v1 = 'Hello World';
+var v2 = 2;
+
+function f(){
+  v3 = true;
+  var v4 = v2+2;
+}
+
+f();
+
+</script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>Variables</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * There's always an object called window</h3>
+    <button onclick="alert(window)">alert(window)</button>
+
+    <h3 style="margin-top: 30px;">
+      * This object represents the browser window.
+    <br> For example, it knows how to scroll:</h3>
+    <button onclick="window.scrollTo(0,1000)">window.scrollTo(0,1000)</button>
+
+    <h3 style="margin-top: 30px;">
+      * Without "var", variables end up on that window object</h3>
+    <button onclick="alert(window.v1)">alert(window.v1)</button>
+
+    <h3 style="margin-top: 30px;">
+      * Stuff that lives on window are called "global".
+      <br> If it's global, you don't need to say "window."</h3>
+    <button onclick="alert(v1)">alert(v1)</button>
+
+    <h3 style="margin-top: 30px;">
+      * alert is a global function</h3>
+    <button onclick="window.alert(v1)">window.alert(v1)</button>
+
+    <h3 style="margin-top: 30px;">
+      * When defined outside of a function, a variable will be global
+      <br> even if you use "var" </h3>
+    <button onclick="alert(v2)">alert(v2)</button>
+
+    <h3 style="margin-top: 30px;">
+      * Without "var", the variable is global
+      <br> even if you define it inside of a function. </h3>
+    <button onclick="alert(v3)">alert(v3)</button>
+
+    <h3 style="margin-top: 30px;">
+      * When a variable is not global,
+      <br> we say it's local. </h3>
+    <button onclick="alert(window.v4)">alert(window.v4)</button>
+
+
+    <h3 style="margin-top: 30px;">
+      * Hey, have you seen chrome's toolbar?
+      <br> It's very useful!</h3>
+    <ul>
+      <li>Console</li>
+      <li>Debug</li>
+      <li>Elements</li>
+      <li>Network</li>
+    </ul>
+
+    <h3 style="margin-top: 30px;">
+      * AVOID creating global vars
+      <br> (globals are evil)</h3>
+
+    <h3 style="margin-top: 30px;">
+      * "undefined" is a global variable that is returned whenever 
+      <br> we try to read a non-existent attribute of an object</h3>
+    <button onclick="alert(window.v4)">alert(window.v4)</button>
+
+    <h3 style="margin-top: 30px;">
+      * This is not the same as using a variable that _does not exist_
+      <br> (Take a look at the console...)</h3>
+    <button onclick="alert(v4)">alert(v4)</button>
+  </div>
+
+  <h3 style="margin-top: 30px;">Got it, NEXT!</h3>
+  <ul>
+    <li><a href="003-arrays_objetos.html">Arrays and Objects</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

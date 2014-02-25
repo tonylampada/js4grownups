@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script type="text/javascript">
+
+var people = [
+  {nome: 'Snowden', age: 34, nice_guy: true},
+  {nome: 'Obama', age: 43, nice_guy: undefined}
+]
+
+</script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>Serializing data with JSON</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * JSON is</h3>
+    <div class="alert alert-info">
+      A format to serialize data that
+      happens to be valid javascript
+    </div>
+
+    <h3 style="margin-top: 30px;">
+      * JSON.stringify</h3>
+      <button onclick="console.log(JSON.stringify(people))">JSON.stringify(people)</button>
+
+    <h3 style="margin-top: 30px;">
+      * stringify, pretty</h3>
+      <button onclick="console.log(JSON.stringify(people, null, 4))">JSON.stringify(people, null, 4)</button>
+
+    <h3 style="margin-top: 30px;">
+      * JSON.parse</h3>
+    <ul>
+      <li>Without qoutes on attribute names, it's NOT valid JSON</li>
+    </ul>
+
+    <h3 style="margin-top: 30px;">
+      * Backends that return JSON</h3>
+      <ul>
+        <li>
+          <a href="http://freedomsponsors.org">FreedomSponsors</a>: 
+          <a href="http://freedomsponsors.org/core/json/list_issue_cards?sponsoring=true&offset=10&count=5">Look at the JSON</a> 
+        </li>
+        <li>
+          <a href="https://api.github.com/repos/freedomsponsors/www.freedomsponsors.org/issues">Github</a>
+        </li>
+        <li>
+          etc, etc
+        </li>
+      </ul>
+
+  <h3 style="margin-top: 30px;">Sweet, NEXT!</h3>
+  <ul>
+    <li><a href="005-funcoes.html">Functions</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="005-funcoes.js"></script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>Functions</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * Parameters</h3>
+      <button onclick="alert(soma(2, 3))">soma(2, 3)</button>
+
+    <h3 style="margin-top: 30px;">
+      * The special "arguments" variable</h3>
+      <button onclick="alert(somatudo(1,2,3,4,5,6,7,8,9))">somatudo(1,2,3,4,5,6,7,8,9)</button>
+
+    <h3 style="margin-top: 30px;">
+      * Nested functions</h3>
+      <button onclick="n_alerts(1,2,3)">n_alerts(1,2,3)</button>
+      <ul>
+      	<li>They're local!</li>
+      </ul>
+
+    <h3 style="margin-top: 30px;">
+      * Functions as variables</h3>
+      <button onclick="alert(f2(f1(1,2),f1(3,4)))">f2(f1(1,2),f1(3,4))</button>
+
+    <h3 style="margin-top: 30px;">
+      * Functions as arguments to other functions</h3>
+      <button onclick="alert(reduce([1,2,3,4,5], f2))">reduce([1,2,3,4,5], f2)</button> / <button onclick="alert(reduce([1,2,3,4,5], f1))">reduce([1,2,3,4,5], f1)</button>
+
+    <h3 style="margin-top: 30px;">It looks a little confusing, but let's keep going...</h3>
+  <ul>
+    <li><a href="006-async.html">Asynchronous programming</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

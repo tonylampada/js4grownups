@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="009-this.js"></script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>This</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * This... is that it?</h3>
+    <div class="alert alert-info">
+      :-)<br><br>
+
+      Every function has access to a "this" variable, which is<br>
+      nothing more than the object that invoked the function.<br>
+      Inside the code of <pre>plane.fly()</pre>, this, inside method "fly()" will point to the "plane" variable.<br>
+      Simple isn't it...<br>
+      But a lot of good people get lost here!
+
+    </div>
+
+
+    <h3 style="margin-top: 30px;">
+      * Exemple 1</h3>
+    <div class="highlight"><pre>
+      function whois_this(){ console.log(this); }
+      whois_this();
+
+      plane = {}
+      plane.fly = quem_eh_this;
+      plane.fly();
+
+      //Important lesson:
+      //Depending on the context, "this" can be something else!!!
+      //And this is where it gets dangerous
+    </pre></div>
+
+    <h3 style="margin-top: 30px;">
+      * Let's see a more concrete example...</h3>
+    <button onclick="o.alertnow()">o.alertnow()</button> /
+    <button onclick="o.alertlater()">o.alertlater()</button>
+
+    <h3 style="margin-top: 30px;">
+      * See the problem?</h3>
+    <div class="alert alert-info">
+      Some specialists criticize the language because of this behaviour (personally I think they do have a point)<br>
+      Now, remember that technique to log javascript errors on the server side without repetition?<br>
+      Let's do it differently.
+    </div>
+
+    <button onclick="set_onerror1()">set_onerror1()</button> /
+    <button onclick="breakme()">breakme()</button>
+
+    <div class="alert alert-info">
+      Can you see the size of this mess??<br>
+      Here's one way to fix this:
+    </div>
+
+    <button onclick="set_onerror2()">set_onerror2()</button> /
+    <button onclick="breakme()">breakme()</button>
+
+    <div class="alert alert-info">
+      So, here's the deal:<br>
+      BE CAREFUL with this. It might not be who you think it is!
+    </div>
+
+
+  <h3 style="margin-top: 30px;">I can't event trust "myself"? That's sad! :'(</h3>
+  <ul>
+    <li>Bad news, I know...</li>
+    <li>But hey, there's this thing called AngularJS...</li>
+    <li>It's really interesting and totally worth it!</li>
+    <li>It changed how I looked at javascript, because of it I think JS is...</li>
+    <li>a super so-so languange (which is a huge improvement on my previous opinion)</li>
+    <li>You should go ahead and <a href="http://angularjs.org/">study it</a></li>
+    <li>If you can understand portuguese, watch <a href="http://www.youtube.com/watch?v=-gL0Hbk74i4&list=PLgMNBa0XaIgcD9IGiqvAQxPrUEyW_i87I">my videos on it</a></li>
+    <li>Or you can send me an email and I'll let you know if I ever create something in english</li>
+    <li>here --> tonylampada@gmail.com</li>
+    <li>Thanks for watching, hope you enjoyed it!</li>
+    <li>Don't forget to send me feedback about how to improve this!</li>
+  </ul>
+</div>
+
+</body>
+</html>

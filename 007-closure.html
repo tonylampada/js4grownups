@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Javascript for grown-ups</title>
+<link rel="stylesheet" href="../css/bootstrap.css">
+<script src="007-closure.js"></script>
+</head>
+<body>
+<div class="container" style="margin: 15px;">
+  <h1>Closure</h1>
+
+  <div>
+
+    <h3 style="margin-top: 30px;">
+      * Closure? What's this?</h3>
+    <div class="alert alert-info">
+      When you have nested functions, the most internal function<br>
+      has access to the local variables of the most external function.<br>
+      (And boy, this can get complicated)
+    </div>
+
+
+    <h3 style="margin-top: 30px;">
+      * Exemple 1</h3>
+      <button onclick="closure_101()">closure_101()</button>
+
+    <h3 style="margin-top: 30px;">
+      * It seems complicated, but there's an advantage here:</h3>
+    <div class="alert alert-info">
+      You can use the closure of functions to <strong>store state</strong>,<br>
+      without resorting to global variables.
+    </div>
+
+    <h3 style="margin-top: 30px;">
+      * Exemple: Bank account</h3>
+      <button onclick="cc()">cc()</button>
+
+    <h3 style="margin-top: 30px;">
+      * Another example: logging errors</h3>
+      <button onclick="breakme()">breakme()</button>
+
+
+  <h3 style="margin-top: 30px;">I think I'll have to come back here later, but OK, NEXT!</h3>
+  <ul>
+    <li><a href="008-prototype.html">Prototype</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
