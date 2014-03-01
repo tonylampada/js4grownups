@@ -8,7 +8,7 @@ o.alertlater = function(){
 
 
 function ajax_faz_de_conta(msg, url, lineNumber){
-	console.log('Enviando erro pro servidor: '+url+':'+lineNumber+' - '+msg);
+	console.log('Sending error to server: '+url+':'+lineNumber+' - '+msg);
 }
 
 function breakme(){
@@ -18,14 +18,14 @@ function breakme(){
 
 function set_onerror1(){
 	function ErrorLogger(){
-		this.ja_loguei = {};
+		this.already_logged = {};
 	}
 
 	ErrorLogger.prototype.log_error = function(msg, url, lineNumber){
-		console.log('peguei o erro');
-		if(!this.ja_loguei[msg]){
+		console.log('got the error');
+		if(!this.already_logged[msg]){
 			ajax_faz_de_conta(msg, url, lineNumber);
-			this.ja_loguei[msg] = true;
+			this.already_logged[msg] = true;
 		}
 	}
 
@@ -35,16 +35,16 @@ function set_onerror1(){
 
 function set_onerror2(){
 	function ErrorLogger(){
-		this.ja_loguei = {};
+		this.already_logged = {};
 	}
 
 	ErrorLogger.prototype.log_error_generator = function(){
 		var _this = this;
 		var log_error = function(msg, url, lineNumber){
-			console.log('peguei o erro');
-			if(!_this.ja_loguei[msg]){
+			console.log('got the error');
+			if(!_this.already_logged[msg]){
 				ajax_faz_de_conta(msg, url, lineNumber);
-				_this.ja_loguei[msg] = true;
+				_this.already_logged[msg] = true;
 			}
 		}
 		return log_error;

@@ -16,23 +16,23 @@ function alert_in_3_denovo(){
 var timer;
 function ei_ei_ei(){
 	timer = setInterval(function(){
-		console.log('ei...');
-		console.log('ei vc aí!');
+		console.log('hey...');
+		console.log('hey you there!');
 	}, 1000)
 }
 
 function chega(){
-	console.log('Pára de encher!');
+	console.log('Stop bothering me!');
 	clearInterval(timer);
 }
 
 function ajax_sim(){
 	var url = 'https://api.github.com/repos/freedomsponsors/www.freedomsponsors.org/issues'
 	$.get(url).success(function(result){
-		console.log('02 - do que isso!');
+		console.log('02 - this runs after!');
 		console.table(result);
 	});
-	console.log('01 - isso roda antes...');
+	console.log('01 - this runs before...');
 }
 
 function ajax_nao(){

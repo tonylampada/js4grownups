@@ -39,21 +39,21 @@ function cc(){
 	conta2.print_all();
 }
 
-////////////// Herança //////////////
+////////////// Inheritance //////////////
 
 
-// Veiculo
+// Vehicle
 function Veiculo(rodas){
 	this.rodas = rodas;
 }
 
 Veiculo.prototype.barulho = function(){
-	console.log('Barulho desconhecido')
+	console.log('Unknown sound')
 }
 
 Veiculo.prototype.print_all = function(){
 	console.log('-----------------');
-	console.log('rodas: '+this.rodas);
+	console.log('wheels: '+this.rodas);
 	this.barulho();
 }
 

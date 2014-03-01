@@ -14,19 +14,19 @@ function meus_arrays(){
   //array size
   console.log("size = "+a1.length); 
 
-  //adicionar elementos no array
+  //add elements to array
   a1.push(1);
   a1.push('two'); 
   a1.push(false);
   console.log("a1 = "+a1);
 
-  //array inicializado
+  //create initialized array
   var a2 = [a1, 2, 3, 4, 5, 6, 7]; 
 
   //acessando elemento do array
   console.log("a2[0][1] = "+a2[0][1]); 
 
-  //arranca 3 elementos a partir da posicao 1
+  //remove 3 elements starting on position 1
   var a3 = a2.splice(1, 3); 
 
   console.log("a2 = "+a2);
@@ -35,37 +35,38 @@ function meus_arrays(){
 
 
 function meus_objetos(){
-  //objeto vazio
+  //empty object
   var o1 = {};
 
-  //adicionar atributo
+  //add attribute
   o1.x = 'one';
 
-  //acessar atributo II
+  //add attribute reloaded 
   o1['y'] = 2;
 
   var letraZ = 'z';
 
-  //acessar atributo II reloaded
+  //add attribute revolutions
   o1[letraZ] = false;
 
   console.log('o1.y = '+o1.y);
 
-  //Vc esta logando isso errado
+  //Logging objects: You're doing it wrong
   console.log('o1 = '+o1);
-  //Agora sim
+  
+  //Now we're talking
   console.log("Veja o1:");
   console.table([o1]);
 
-  //objeto inicializado com 2 atributos
+  //Initialize object with 2 attributes
   var o2 = {x:1, y:"dois"};
-  //Assim tb funciona
+  //This works too
   var o3 = {"x":3, "y":"quatro"};
   var array = [o2, o3];
   console.log("Veja o1 e o3:");
   console.table(array);
 
-  //e pra deletar
+  //And for deleting attributes
   delete o1.x;
   delete o1['y'];
   console.log("Veja o1 de novo:");
@@ -75,12 +76,12 @@ function meus_objetos(){
 function foriiiiin(){
   var array = ['a', 'b', 'c'];
 
-  console.log('for normal:')
+  console.log('normal for:')
   for(var i=0; i<array.length; i++){
     console.log(i+'-->'+array[i]);
   }
 
-  console.log('for in no array:')
+  console.log('array forin:')
   for(var i in array){
     console.log(i+'-->'+array[i]);
   }
@@ -88,9 +89,9 @@ function foriiiiin(){
   var pessoa = {
     nome: 'Tony',
     idade: 32,
-    gente_boa: true
+    nice_guy: true
   }
-  console.log('for in no objeto:')
+  console.log('object forin:')
   for(var prop in pessoa){
     console.log(prop+'-->'+pessoa[prop]);
   }

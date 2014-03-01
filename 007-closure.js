@@ -35,8 +35,8 @@ function cc(){
 			},
 			'print_all':function(){
 				console.log('----------'+nome+'-----------')
-				console.log('Saldo: '+saldo);
-				console.log('Extrato:');
+				console.log('Balance: '+saldo);
+				console.log('History:');
 				for (i in extrato){
 					console.log('\t'+extrato[i]);
 				}
@@ -45,8 +45,8 @@ function cc(){
 		return conta;
 	}
 
-	var conta1 = Conta('Joao');
-	var conta2 = Conta('Maria');
+	var conta1 = Conta('John');
+	var conta2 = Conta('Mary');
 
 	conta1.depositar(50);
 	conta2.depositar(100);
@@ -55,13 +55,13 @@ function cc(){
 	conta2.print_all();
 }
 
-//Outro exemplo
-//Um error logger que não loga o mesmo erro duas vezes:
+//Another example
+//An error logger that only sends the same error once:
 
 window.onerror = function(){
 
 	function fake_ajax(msg, url, lineNumber){
-		console.log('Enviando erro pro servidor: '+url+':'+lineNumber+' - '+msg);
+		console.log('Sending error to server: '+url+':'+lineNumber+' - '+msg);
 	}
 
 	var ja_loguei = {};
