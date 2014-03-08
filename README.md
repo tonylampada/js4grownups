@@ -1,7 +1,8 @@
 js4grownups
 ===========
 
-Slides for the "Javascript for grown-ups" training session
+Slides for the "Javascript for grown-ups" training session.
+
 [Watch the Hangout on Youtube](http://www.youtube.com/watch?v=iabZob_YEKg) a few tips:
 
 * Description has timelinks - you can skip to topics you want
