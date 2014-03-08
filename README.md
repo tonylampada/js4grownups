@@ -21,3 +21,8 @@ Topics covered:
 * This
 
 See it on the browser --> http://tonylampada.github.io/js4grownups/
+
+If this materiak was useful to you, consider making a donation!
+
+* Bitcoin: 12vWvspaT4dde3PWUr8Ud1QGn1KRH5Fsnj
+* Paypal: tonylampada@gmail.com
